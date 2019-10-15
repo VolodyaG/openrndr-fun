@@ -1,13 +1,17 @@
+package com.volodya
+
 import org.openrndr.application
 import org.openrndr.color.ColorRGBa
 import org.openrndr.draw.FontImageMap
 import org.openrndr.draw.loadImage
 import org.openrndr.draw.tint
+import java.awt.Toolkit
 
 fun main() = application {
     configure {
-        width = 768
-        height = 576
+        width = Toolkit.getDefaultToolkit().screenSize.width / 2
+        height = Toolkit.getDefaultToolkit().screenSize.height / 2
+
     }
 
     program {
